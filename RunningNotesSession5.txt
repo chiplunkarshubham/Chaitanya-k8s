@@ -33,6 +33,12 @@ docker-compose installation
 1. Location cd /usr/local/bin
 2. Link wget 
 
+
++++++++++
+File name
++++++++++
+docker-compose.yml
+
 ++++++++
 Commands
 ++++++++

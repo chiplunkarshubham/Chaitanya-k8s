@@ -1,0 +1,91 @@
+Session 4:
+++++++++++++++++++++++++++++++++++++++++++++
+Programming Languages vs Scripting languages
+++++++++++++++++++++++++++++++++++++++++++++
+
+For building applications --> Programming Languages --> python, node
+To transfer data from application to application --> Scripting Languages --> json, yml --> key value pairs
+
+Application {username,password,email,phone number} --> Database
+
+~~~~~~~~~~~
+json vs yml
+~~~~~~~~~~~
+
+json has flower braces {}, [] and "" (only for digits we dont have "")
+json starts with {}
+For list data type we use []
+{
+  "RDS": ["Oracle", "MySQL"]
+}
+"" is used by all expect digits
+-------
+yml starts with --- and ...
+For list data type we use : and -
+RDS:
+- Oracle
+- MySQL
+No Double quotes, except for version: '3'
+
++++++++++++++++++++++++++++
+docker-compose installation
++++++++++++++++++++++++++++ 
+1. Location cd /usr/local/bin
+2. Link wget 
+
+++++++++
+Commands
+++++++++
+docker-compose up -d
+docker-compose down
+
+replicas: ??
+
+++++++++++++++++++
+Additional Details
+++++++++++++++++++
+If not mentioned, docker-compose will create its own network.
+If image is built by docker-compose, then after "docker-compose down" it will not get deleted. Only containers, networks, volumes are terminated.
+
++++++++++++
+nano editor
++++++++++++
+Ctrl+K to remove a line in nano editor
+
+
++++++
+Spare
++++++
+{
+  "PublicClouds": [
+    {
+	"Cloud": "AWS",
+	"YOE": 2006,
+	"Services": [ "EC2", "VPC", "S3", { "RDS": ["MySQL", "MsSQL", "Oracle", "Postgresql"] } ]
+    },
+    {
+         "Cloud": "Azure"
+    }
+  ]
+  
+}
+For digits no need of double quotations
+
+Indentation
+Square braces for list in json vs : <enter> - (below)
+---
+PublicClouds:
+- Cloud: AWS
+  YOE: 2006
+  Services:
+  - VPC
+  - EC2
+  - S3
+  - RDS:
+    - MYSQL
+    - PostgreSQL
+    - MsSQL
+    - Oracle
+- Cloud: Azure
+...
+
